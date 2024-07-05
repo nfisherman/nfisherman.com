@@ -16,12 +16,31 @@ import requests
 import sys
 from urllib.parse import urlparse
 
-__version__ = '1'
+__version__ = '1.1'
 __author__ = 'Cedar Lehman'
 __contact__ = 'ca.lehman05@gmail.com'
 
 
 def get_ver(repo: str, key: str = None):
+    """Return the release tag of the latest release in the given repo.
+    Optionally, include a key to authenticate with GitHub. Not
+    including a key may result in the user being rate-limited.
+
+    Args:
+        repo:
+            The GitHub repository to check the release tag(s) of.
+        key:
+            (optional) Key to use to authenticate with GitHub.
+
+    Returns:
+        The latest release tag (ex. v0.1).
+
+    Raises:
+        ValueError: If the repo provided is either:
+
+            1. not a valid URL
+            2. not a GitHub repo
+    """
     # transform url to api url
     if repo.find('https://') == -1:
         repo = f'https://{repo}'
