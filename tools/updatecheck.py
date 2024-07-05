@@ -33,7 +33,7 @@ def get_ver(repo: str, key: str = None):
             (optional) Key to use to authenticate with GitHub.
 
     Returns:
-        The latest release tag (ex. v0.1).
+        The latest release tag (ex. 'v0.1').
 
     Raises:
         ValueError: If the repo provided is either:
