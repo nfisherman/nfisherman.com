@@ -11,16 +11,6 @@ Files: site/blog/*
 Copyright: Cedar Lehman <ca.lehman05@gmail.com>
 License: CC-BY-NC 4.0
 
-Files: site/fonts/Hanged_Letters/*
-Copyright: Hareesh Seela <seela.hareesh@gmail.com>
-License: Free for Personal Use
-Source: https://www.dafont.com/hanging-letters.font
-
-Files: site/fonts/NDS12/*
-Copyright: Caveras <cava@caveras.net>
-License: CC-BY-NC-SA 3.0
-Source: https://www.caveras.net/
-
 License: CC-BY-NC 4.0
  This work is licenced under the Creative Commons Attribution-NonCommercial 
  4.0 International License. To view a copy of this licence, visit
