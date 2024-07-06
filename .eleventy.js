@@ -1,4 +1,5 @@
 module.exports = (eleventyConfig) => {
+	eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
     eleventyConfig.addPassthroughCopy("./asset/");
     eleventyConfig.addPassthroughCopy("./script/");
     eleventyConfig.addPassthroughCopy("./style/")
