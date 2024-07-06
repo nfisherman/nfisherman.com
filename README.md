@@ -6,8 +6,6 @@ My website built with blood, sweat, and tears (and eleventy)
 
  - [node](https://nodejs.org/)
    - [eleventy](https://www.11ty.dev)
-   - dotenv
-   - html-minify-terser
 
  ## Usage
 
