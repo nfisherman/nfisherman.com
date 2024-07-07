@@ -38,7 +38,7 @@ if [[ $? -ne 0 ]]; then
 fi
 
 OUTPUT="release"
-SOURCE="_site"
+SOURCE="dist"
 eval set -- "$VALID_ARGS"
 while [ : ]; do
     case "$1" in
@@ -90,6 +90,32 @@ mkdir -p "$OUTPUT/v$VERSION" \
 
 rm -rf "$SOURCE"
 npx @11ty/eleventy
+
+cat > "$SOURCE/copyright.html" <<EOF
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>copyright.txt - nfisherman</title>
+    </head>
+    <body>
+        <main>
+            <a href="/" style="margin-bottom: 10px;">◂ home</a>
+<div><pre>$(cat copyright | sed 's/site\///' -)</pre></div>
+        <a href="https://github.com/nfisherman/nfisherman.com">source</a>
+        </main>
+        
+        <style>
+            body { background-image: url('/asset/img/background/gmcbg.gif'); }
+            main { font-family: monospace; background: white; border: 1px solid black; 
+                   color: black; max-width: 600px; padding: 10px; }
+             div { background: #BDBDBD; border: 1px solid black; white-space: pre-wrap;
+                   padding: 10px; }
+        </style>
+    </body>
+</html>
+EOF
 echo "$VERSION" > "$SOURCE/VERSION"
 
 tar -czvf "$fullpath" -C "$SOURCE" .
