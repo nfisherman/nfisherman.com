@@ -5,16 +5,19 @@
 
     /* spacing */
     --padding: 15px;
+    --spacing: 20px;
     --shadow-spacing: 6px;
     --min-spacing: 12px;
 
     /* colors */
-    --content: rgba(255, 255, 255, 0.5);
+    --content: rgba(255, 255, 255, 0.68);
     --strong: #19647E;
+    --strong-light: #28AFB0;
     --strong-dark: #134a5c;
 
     /* fonts */
     --mono: 'Meslo LGMDZ Mono', 'Courier New', Courier, monospace;
+    --emoji: 'Noto Emoji Light';
 }
 
 /* if you have the URL of a font, you can set it below */
@@ -22,6 +25,11 @@
 @font-face {
     font-family: 'Meslo LGMDZ Mono';
     src: url('/asset/font/MesloLGMDZ/MesloLGMDZNerdFontMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Noto Emoji Light';
+    src: url('/asset/font/NotoEmoji/static/NotoEmoji-Light.ttf');
 }
 
 @font-face {
@@ -52,7 +60,7 @@ body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     background-size: 65px;
-    color: #000000;
+    color: black;
     background-image: var(--body-bg-image);
 }
 
@@ -77,11 +85,24 @@ body {
 /* the area below is for all links on your page
     EXCEPT for the navigation */
 #container a {
-    color: var(--strong);
     font-weight: bold;
     /* if you want to remove the underline
         you can add a line below here that says:
         text-decoration:none; */
+}
+
+#container a:link {
+    color: var(--strong);
+}
+
+#container a:visited, #container a:active {
+    color: var(--strong-light);
+    font-weight: normal;
+}
+
+#container a:hover {
+    color: white;
+    background-color: black;
 }
 
 .box-container {
@@ -95,6 +116,13 @@ body {
     width: 100%;
     height: auto;
     padding: 0 var(--padding) 0 var(--padding);
+    margin-bottom: var(--spacing);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: var(--mono);
 }
 
 nav#collapsible {
@@ -105,8 +133,45 @@ nav#leftSidebar {
     order: 1;
     width: 200px;
     padding: var(--padding);
+    margin-right: var(--spacing);
     font-size: smaller;
     /* this makes the sidebar text slightly smaller */
+}
+
+nav#leftSidebar ul a {
+    text-decoration: none;
+}
+
+nav#leftSidebar ul a li {
+    width: 100%;
+    padding: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: calc(var(--padding) / 2);
+    text-align: right;
+
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+nav#leftSidebar ul a li span {
+    font-family: var(--emoji);
+    float: left;
+    font-size: 15px;
+}
+
+nav#leftSidebar ul a:nth-child(even) li {
+    text-align: left;
+}
+
+nav#leftSidebar ul a:nth-child(even) li span {
+    float: right;
+}
+
+nav#leftSidebar ul li:hover, nav#leftSidebar ul li:hover a {
+    background: black;
+    color: white;
 }
 
 #flex {
@@ -137,6 +202,7 @@ footer {
     width: 100%;
     height: auto;
     padding: var(--padding);
+    margin-top: var(--spacing);
 
     display: flex;
 }
@@ -171,9 +237,22 @@ strong {
 
 /* this is just a cool box, it's the darker colored one */
 .box {
-    background-color: var(--content);
+    width: 100%;
     border: 1px solid #000000;
     padding: var(--padding);
+    margin-bottom: var(--padding);
+}
+
+.header-bar {
+    background-image: linear-gradient(to right, white 25%, var(--strong-light));
+    padding: 0;
+    line-height: 0; 
+    display: block;
+}
+
+.header-bar h1, .header-bar h2, .header-bar h3 {
+    color: black;
+    margin-left: 5px;
 }
 
 /* CSS for extras */
@@ -227,6 +306,10 @@ strong {
         text-align: right;
         margin: auto 0 auto auto;
         overflow: hidden;
+    }
+
+    nav#collapsible ul a li span {
+        display: none;
     }
 
     /* Dropdown button */
