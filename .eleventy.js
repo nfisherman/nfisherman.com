@@ -1,14 +1,10 @@
 module.exports = (eleventyConfig) => {
 	eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
-	eleventyConfig.addPassthroughCopy("./asset/");
-	eleventyConfig.addPassthroughCopy("./script/");
-	eleventyConfig.addPassthroughCopy("./style/")
+	eleventyConfig.addPassthroughCopy("asset");
+	eleventyConfig.addPassthroughCopy("script");
+	eleventyConfig.addPassthroughCopy("style")
 	eleventyConfig.addPassthroughCopy({
-		"./tools/pull-latest.sh": "./pull-latest.sh"
-	});
-
-	eleventyConfig.addExtension("11ty.php", {
-		key: "11ty.html",
+		"tools/pull-latest.sh": "pull-latest.sh"
 	});
 
 	return {
