@@ -203,7 +203,11 @@ main {
 
 main .box-container {
     padding: var(--padding);
-    margin-bottom: var(--spacing);
+    margin-top: var(--spacing);
+}
+
+main > .box-container:first-of-type {
+    margin-top: 0;
 }
 
 .inline {
@@ -274,7 +278,6 @@ strong {
     width: 100%;
     border: 1px solid #000000;
     padding: var(--padding);
-    margin-bottom: var(--padding);
 }
 
 .header-bar {
