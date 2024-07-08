@@ -1,0 +1,32 @@
+[
+    {
+        "name": "home",
+        "icon": "&#127968;",
+        "path": "/"
+    },
+    {
+        "name": "about",
+        "icon": "&#9773;",
+        "path": "about"
+    },
+    {
+        "name": "blog",
+        "icon": "&#9997;",
+        "path": "blog"
+    },
+    {
+        "name": "projects",
+        "icon": "&#128421;",
+        "path": "projects"
+    },
+    {
+        "name": "library",
+        "icon": "&#128214;",
+        "path": "library"
+    },
+    {
+        "name": "shrines",
+        "icon": "&#9961;",
+        "path": "shrines"
+    }
+]
