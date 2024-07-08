@@ -7,6 +7,12 @@ module.exports = (eleventyConfig) => {
 		"tools/pull-latest.sh": "pull-latest.sh"
 	});
 
+	eleventyConfig.addShortcode(
+		"header",
+		(tag, text) =>
+		  `<div class="box header-bar"><${tag}>${text}</${tag}></div>`
+	);
+
 	return {
 		dir: {
 			input: "site",
