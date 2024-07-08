@@ -8,6 +8,9 @@
     --spacing: 20px;
     --shadow-spacing: 6px;
     --min-spacing: 12px;
+    --max-width: 900px;
+    --sidebar-width: 200px;
+    --content-width: calc(var(--max-width) - var(--sidebar-width));
 
     /* colors */
     --content: rgba(255, 255, 255, 0.68);
@@ -68,11 +71,17 @@ body {
     box-sizing: border-box;
 }
 
+.emoji {
+    font-family: var(--emoji);
+    float: left;
+    font-size: 15px;
+}
+
 /* below this line is CSS for the layout */
 
 /* the "container" is what wraps your entire website */
 #container {
-    max-width: 900px;
+    max-width: var(--max-width);
     /* this is the width of your layout! */
     /* if you change the above value, scroll to the bottom
         and change the media query according to the comment! */
@@ -130,8 +139,10 @@ nav#collapsible {
 }
 
 nav#leftSidebar {
+    display: flex;
+    flex-direction: column;
     order: 1;
-    width: 200px;
+    width: var(--sidebar-width);
     padding: var(--padding);
     margin-right: var(--spacing);
     font-size: smaller;
@@ -155,23 +166,21 @@ nav#leftSidebar ul a li {
     border: 1px solid black;
 }
 
-nav#leftSidebar ul a li span {
-    font-family: var(--emoji);
-    float: left;
-    font-size: 15px;
-}
-
 nav#leftSidebar ul a:nth-child(even) li {
     text-align: left;
 }
 
-nav#leftSidebar ul a:nth-child(even) li span {
+nav#leftSidebar ul a:nth-child(even) .emoji {
     float: right;
 }
 
 nav#leftSidebar ul li:hover, nav#leftSidebar ul li:hover a {
     background: black;
     color: white;
+}
+
+.fill-vertical{
+    flex-grow: 1;
 }
 
 #blinkies img {
@@ -181,6 +190,7 @@ nav#leftSidebar ul li:hover, nav#leftSidebar ul li:hover a {
 }
 
 #flex {
+    margin-bottom: var(--spacing);
     display: flex;
 }
 
@@ -188,8 +198,26 @@ nav#leftSidebar ul li:hover, nav#leftSidebar ul li:hover a {
     between the sidebars! */
 main {
     flex: 1;
-    padding: var(--padding);
     order: 2;
+}
+
+main .box-container {
+    padding: var(--padding);
+    margin-bottom: var(--spacing);
+}
+
+.inline {
+    width: 100%;
+    display: flex;
+}
+
+.inline * {
+    margin-left: var(--spacing);
+    width: 50%;
+}
+
+.inline *:first-child {
+    margin-left: 0;
 }
 
 /* what's this "order" stuff about??
@@ -208,7 +236,7 @@ footer {
     width: 100%;
     height: auto;
     padding: var(--padding);
-    margin-top: var(--spacing);
+    /* margin-top: var(--spacing); */
 
     display: flex;
 }
@@ -361,6 +389,11 @@ strong {
     .dropbtn--input:checked + .dropdown-content {
         display: block;
     } 
+
+    .inline * {
+        width: 100%;
+        /* display: block; */
+    }
 }
 
 @media only screen and (max-width: 675px) {
