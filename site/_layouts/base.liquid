@@ -10,14 +10,7 @@
     <body>
         <div id="container">
             <div id="header" class="box-container">
-                <h1 aria-hidden>nfisherman<span id="path"> ☆ ~{{ page.url }}</span></h1>
-                <nav id="collapsible">
-                    <label class="dropbtn" for="cb">▼ nav</label>
-                    <input id="cb" class="dropbtn--input" type="checkbox" />
-                    <div class="dropdown-content box-container">
-                        {% include '_nav.liquid' %}
-                    </div>
-                </nav> 
+                {% include '_header.liquid' %}
             </div>
             
             <div id="flex">
