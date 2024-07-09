@@ -28,5 +28,10 @@
         "name": "shrines",
         "icon": "&#9961;",
         "path": "shrines"
+    },
+    {
+        "name": "links",
+        "icon": "&#128279;",
+        "path": "links"
     }
 ]
