@@ -1,0 +1,24 @@
+---
+    layout: left-nav-sidebar.liquid
+---
+
+<main>
+    <div class="box-container">
+        {% header "h3" title %}
+
+        {{ content }}
+    </div>
+    <div class="inline">
+        <div class="box-container">
+            {% header "h3" "cool tunes" %}
+
+            {% include '_soundcloud-widget.liquid' %}
+        </div>
+        <div class="box-container">
+            {% header "h3" "camera roll" %}
+        </div>
+    </div>
+    <div class="box-container">
+        buttons
+    </div>
+</main>
