@@ -102,7 +102,7 @@ cat > "$SOURCE/copyright.html" <<EOF
     <body>
         <main>
             <a href="/" style="margin-bottom: 10px;">◂ home</a>
-<div><pre>$(cat copyright | sed 's/site\///' -)</pre></div>
+<div><pre>$(cat copyright | sed 's/site\///' - | sed 's/</\&lt/' - )</pre></div>
         <a href="https://github.com/nfisherman/nfisherman.com">source</a>
         </main>
         
