@@ -7,7 +7,7 @@ Files: *
 Copyright: Cedar Lehman <ca.lehman05@gmail.com>
 License: WTFPLv2
 
-Files: site/blog/*
+Files: site/blog/*/*
 Copyright: Cedar Lehman <ca.lehman05@gmail.com>
 License: CC-BY-NC 4.0
 
