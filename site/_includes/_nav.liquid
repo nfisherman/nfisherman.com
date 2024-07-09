@@ -2,7 +2,7 @@
     {% assign nav = nav %}
     {% for entry in nav %}
         {% unless entry.sub %}
-            <a href="{{ entry.path }}">
+            <a href="/{{ entry.path }}">
         {% endunless %}
             <li>
                 {{ entry.name }}{% if entry.sub %}/{% endif %}
@@ -15,7 +15,7 @@
         {% if entry.sub %}
             <ul>
                 {% for subentry in entry.sub %}
-                    <a href="{{ entry.path }}/{{ subentry.path }}">
+                    <a href="/{{ entry.path }}/{{ subentry.path }}">
                         <li>
                             <span class="nav-path">{{ entry.path }}/</span>{{ subentry.name }}
                             <span class="emoji">{{ subentry.icon }}</span>
