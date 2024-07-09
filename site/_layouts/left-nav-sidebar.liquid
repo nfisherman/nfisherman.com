@@ -1,0 +1,16 @@
+---
+    layout: base.liquid
+---
+
+<nav id="leftSidebar" class="box-container sidebar">
+    {% header "h3", "navigation" %}
+    {% include '_nav.liquid' %}
+
+    <div class="fill-vertical"></div>
+
+    <div id="blinkies">
+        {% include '_blinkies.liquid' %}
+    </div>
+</nav>
+
+{{ content }}
