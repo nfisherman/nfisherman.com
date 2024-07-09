@@ -1,0 +1,170 @@
+{% assign sclatest = soundcloud.latest %}
+{% assign schistory = soundcloud.history %}
+<div class="soundcloud">
+    <div>current jam <span class="emoji">&#9834;</span></div>
+    <div class="inline">
+        <img src="{{ sclatest.art }}" />
+        <div>
+            <div>
+                <a href="{{ sclatest.song_link }}">
+                    <span>{{ sclatest.song }}</span>
+                </a>
+            </div>
+            <hr>
+            <div>
+                <a href="{{ sclatest.artist_link }}">
+                    <span>{{ sclatest.artist }}</span>
+                </a>
+            </div>
+            <div>
+                <span><em>"{{ sclatest.comment }}"</em></span>
+            </div>
+        </div>
+    </div>
+    <div class="tiny">history</div>
+    <ul>
+        {% for entry in schistory %}
+            <li class="tiny">
+                <a href="{{ entry.song_link }}">{{ entry.song }}</a>
+                <span> - </span>
+                <a href="{{ entry.artist_link }}">{{ entry.artist }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<style>
+    .soundcloud {
+        width: 100%;
+
+        color: black;
+        font-family: var(--mono);
+        font-size: 10px;
+        outline: 1px solid black;
+    }
+    
+    .soundcloud > div {
+        border-bottom: 1px solid black; 
+    }
+
+    .soundcloud img {
+        max-width: 100%;
+        max-height: 100%;
+
+        margin: 2px;
+    }
+
+    .soundcloud div {
+        height: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .soundcloud > div:first-of-type {
+        margin: 0;
+        padding: 2px;
+        padding-left: 4px;
+
+        background-image: linear-gradient(to right, white 35%, var(--strong));
+    }
+
+    .soundcloud .inline {
+        background-color: white;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .soundcloud .inline div > span:last-of-type {
+        color: grey;
+    }
+
+    .soundcloud .inline > div:first-of-type div {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .soundcloud a {
+        text-decoration: none;
+    }
+
+    .soundcloud a:hover {
+        text-decoration: underline;
+    }
+
+    .soundcloud div div {
+        font-family: var(--mono);
+        color: white;
+        width: 100%;
+
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .soundcloud div div:last-of-type  {
+        width: fit-content;
+    }
+
+    hr {
+        width: 30%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 1px solid black;
+    }
+
+    .soundcloud div div a {
+        color: white;
+        background-color: var(--light-grey);
+        font-size: 12px;
+
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 3px;
+    }
+
+    .soundcloud div div a:hover div:last-of-type {
+        text-decoration: none;
+    }
+
+    .soundcloud < a:hover {
+        text-decoration: none;
+    }
+
+    .soundcloud .emoji {
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 10px;
+        font-weight: lighter;
+    }
+
+    .soundcloud .tiny {
+        background-color: var(--grey);
+        padding: 1px;
+        padding-left: 2px;
+    }
+
+    .soundcloud li.tiny {
+        background-color: var(--light-grey);
+        border-bottom: 1px solid black;
+        display: list-item;
+        list-style-type: "\27A4";
+        padding-inline-start: 1ch;
+        margin-left: 15px;
+
+    }
+
+    .soundcloud ul {
+        background-color: var(--light-grey);
+        margin: 0;
+        padding: 0;
+    }
+
+    .soundcloud li.tiny:last-of-type {
+        border-bottom: 0;
+    }
+
+    .soundcloud .tiny {
+    }
+
+</style>
