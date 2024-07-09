@@ -2,11 +2,11 @@
     {
         "name": "home",
         "icon": "&#127968;",
-        "path": "/"
+        "path": ""
     },
     {
         "name": "about",
-        "icon": "&#9759;",
+        "icon": "&#128071;",
         "path": "about",
         "sub": [
             {
