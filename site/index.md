@@ -1,5 +1,5 @@
 ---
-layout: index.liquid
+layout: pages/index.liquid
 title: home
 ---
 
