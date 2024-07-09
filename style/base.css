@@ -167,47 +167,69 @@ nav#collapsible {
     display: none;
 }
 
-nav#leftSidebar {
+.sidebar {
     display: flex;
     flex-direction: column;
-    order: 1;
     width: var(--sidebar-width);
     padding: var(--padding);
     margin-right: var(--spacing);
-    
-    /* this makes the sidebar text slightly smaller */
+}
+
+nav#leftSidebar {
+    order: 1;
 }
 
 nav#leftSidebar ul a {
     text-decoration: none;
 }
 
-nav#leftSidebar ul a li {
-    width: 100%;
-    padding: 8px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin-bottom: calc(var(--padding) / 2);
-    text-align: right;
+nav#leftSidebar ul li,
+nav#leftSidebar ul * li {
+    font-family: var(--mono);
 
-    color: black;
+    width: 100%;
+    padding: 2px 8px 2px 8px;
+
     background-color: white;
     border: 1px solid black;
-}
 
-nav#leftSidebar ul a .emoji {
-    float: left;
-}
-
-nav#leftSidebar ul a:nth-child(even) li {
+    color: black;
+    font-weight: bold;
     text-align: left;
 }
 
-nav#leftSidebar ul a:nth-child(even) .emoji {
+nav#leftSidebar ul > li {
+    padding-right: 10px;
+}
+
+nav#leftSidebar > ul > a li,
+nav#leftSidebar ul ul {
+    margin-bottom: calc(var(--spacing) / 2);
+}
+
+nav#leftSidebar ul ul {
+    margin-left: var(--padding);
+}
+
+nav#leftSidebar ul ul a li {
+    border-top: 0;
+    padding-right: 9px;
+}
+
+nav#leftSidebar ul ul a li .nav-path {
+    display: none;
+}
+
+nav#leftSidebar ul ul a:last-of-type li {
+    padding-right: 6px;
+}
+
+nav#leftSidebar ul li .emoji,
+nav#leftSidebar ul * li .emoji {
     float: right;
 }
 
-nav#leftSidebar ul li:hover, nav#leftSidebar ul li:hover a {
+nav#leftSidebar ul a:hover li {
     background: black;
     color: white;
 }
@@ -265,6 +287,8 @@ main > .box-container:first-of-type {
 
 #rightSidebar {
     order: 3;
+    margin-left: var(--spacing);
+    margin-right: 0;
 }
 
 footer {
@@ -381,8 +405,13 @@ strong {
         overflow: hidden;
     }
 
-    nav#collapsible ul a li span {
+    nav#collapsible ul a li .emoji,
+    nav#collapsible ul > li {
         display: none;
+    }
+
+    nav#leftSidebar ul ul a li .nav-path {
+        display: block;
     }
 
     /* Dropdown button */
