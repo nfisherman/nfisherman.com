@@ -15,6 +15,11 @@ Files: asset/font/MesloLGMDZ/*
 Copyright: André Berg <andre@irisvfx.com>
 License: Apache 2.0
 
+Files asset/img/icons/*
+Copyright: Rojal
+Source: https://www.pngall.com/fish-hook-png/download/64621
+License: CC-BY-NC 4.0
+
 License: Apache 2.0
  Licensed under the Apache License, Version 2.0 (the  “License”); you may 
  not use this file except in compliance with the  License.
