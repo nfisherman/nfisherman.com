@@ -6,8 +6,20 @@
     },
     {
         "name": "about",
-        "icon": "&#9773;",
-        "path": "about"
+        "icon": "&#9759;",
+        "path": "about",
+        "sub": [
+            {
+                "name": "me",
+                "icon": "&#9773;",
+                "path": "me"
+            },
+            {
+                "name": "site",
+                "icon": "&#128230;",
+                "path": "site"
+            }
+        ]
     },
     {
         "name": "blog",
