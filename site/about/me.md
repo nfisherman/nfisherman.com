@@ -1,5 +1,5 @@
 ---
-layout: about.liquid
-title: about
+    layout: pages/about.liquid
+    title: about/me
 ---
-# test
+# {{ title }}
