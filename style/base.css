@@ -14,25 +14,52 @@
 
     /* colors */
     --content: rgba(255, 255, 255, 0.68);
+    --grey: #DDCECD;
+    --light-grey: #EEE5E5;
     --strong: #19647E;
     --strong-light: #28AFB0;
     --strong-dark: #134a5c;
 
     /* fonts */
     --mono: 'Meslo LGMDZ Mono', 'Courier New', Courier, monospace;
-    --emoji: 'Noto Emoji Light';
+    --emoji: 'Noto Emoji';
 }
 
 /* if you have the URL of a font, you can set it below */
 
 @font-face {
-    font-family: 'Meslo LGMDZ Mono';
+    font-family: 'Meslo LGMDZ';
     src: url('/asset/font/MesloLGMDZ/MesloLGMDZNerdFontMono-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'Noto Emoji Light';
+    font-family: 'Noto Emoji';
+    src: url('/asset/font/NotoEmoji/static/NotoEmoji-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Noto Emoji';
     src: url('/asset/font/NotoEmoji/static/NotoEmoji-Light.ttf');
+    font-weight: light;
+}
+
+@font-face {
+    font-family: 'Noto Emoji';
+    src: url('/asset/font/NotoEmoji/static/NotoEmoji-Medium.ttf');
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: 'Noto Emoji';
+    src: url('/asset/font/NotoEmoji/static/NotoEmoji-SemiBold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Noto Emoji';
+    src: url('/asset/font/NotoEmoji/static/NotoEmoji-Bold.ttf');
+    font-weight: bolder;
 }
 
 @font-face {
@@ -73,7 +100,6 @@ body {
 
 .emoji {
     font-family: var(--emoji);
-    float: left;
     font-size: 15px;
 }
 
@@ -169,6 +195,10 @@ nav#leftSidebar ul a li {
     border: 1px solid black;
 }
 
+nav#leftSidebar ul a .emoji {
+    float: left;
+}
+
 nav#leftSidebar ul a:nth-child(even) li {
     text-align: left;
 }
@@ -218,12 +248,12 @@ main > .box-container:first-of-type {
     display: flex;
 }
 
-.inline * {
+.inline > * {
     margin-left: var(--spacing);
     width: 50%;
 }
 
-.inline *:first-child {
+.inline > *:first-child {
     margin-left: 0;
 }
 
@@ -265,6 +295,7 @@ h2,
 h3 {
     font-family: var(--mono);
     color: var(--strong);
+    text-shadow: 2px 2px var(--grey);
 }
 
 h1 {
@@ -398,9 +429,13 @@ strong {
         display: block;
     } 
 
-    .inline * {
+    .inline {
+        flex-direction: column;
+    }
+
+    .inline > * {
         width: 100%;
-        /* display: block; */
+        margin-left: 0;
     }
 }
 
