@@ -1,0 +1,17 @@
+[
+    {
+        "name": "parent directory",
+        "icon": "&#128070;",
+        "path": ".."
+    },
+    {
+        "name": "blog index",
+        "icon": "&#9997;",
+        "path": "/blog"
+    },
+    {
+        "name": "home",
+        "icon": "&#127968;",
+        "path": "/"
+    }
+]
