@@ -1,3 +1,5 @@
+let collapsibleNavEmoji = document.querySelector("nav details summary .emoji");
+
 addEventListener("click", e => {
     let click = document.elementFromPoint(e.clientX, e.clientY);
     
@@ -7,7 +9,6 @@ addEventListener("click", e => {
         dropbtn__input.checked = false;
     }
 
-    let collapsibleNavEmoji = document.querySelector("nav details summary .emoji");
     if(document.querySelector("nav details").open){
         collapsibleNavEmoji.textContent = "▼";
     } else {
@@ -29,6 +30,7 @@ function navAutoHide() {
     let blogNav = document.querySelector("nav details");
     if(window.innerWidth < 800 || window.innerHeight < 250){
         blogNav.open = false;
+        collapsibleNavEmoji.textContent = "▼";
     } else {
         blogNav.open = true;
     }
