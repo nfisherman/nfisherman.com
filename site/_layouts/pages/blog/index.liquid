@@ -3,6 +3,44 @@
     title: blog
 ---
 
-<main class="box-container">
+<style>
+    main .header {
+        margin-bottom: calc(var(--spacing) / 2);
+    }
+
+    main > .box .mini-header-bar:last-of-type {
+        display: none
+    }
+
+    .tags > .box-container {
+        display: inline-block;
+        width: fit-content;
+        padding: calc(var(--padding) / 3);
+        margin-top: 0;
+        margin-right: 5px;
+        margin-bottom: var(--spacing);
+        font-size: x-small;
+        box-shadow: 4px 4px;
+    }
+
+
+    @media only screen and (max-width: 800px) {
+        main > .box .mini-header-bar:first-of-type {
+            display: none;
+        }
+
+        main > .box .mini-header-bar:last-of-type {
+            display: block
+        }
+
+        main br {
+            display: none;
+        }
+    }
+</style>
+
+<main class="box-container" style="padding: var(--padding);">
+    
     {{ content }}
+
 </main>
