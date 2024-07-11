@@ -1,6 +1,6 @@
 {% assign sc = soundcloud.data %}
 <div class="soundcloud">
-    <div>current obsession <span class="emoji">&#9834;</span></div>
+    {% miniheader "p" "current obsession <span class=emoji>&#9834;</span>" %}
     <div class="inline">
         <img src="{{ sc[0].art }}" />
         <div>
@@ -43,6 +43,7 @@
     }
     
     .soundcloud > div {
+        border: 0;
         border-bottom: 1px solid black; 
     }
 
@@ -54,17 +55,8 @@
     }
 
     .soundcloud div {
-        height: auto;
         margin-top: auto;
         margin-bottom: auto;
-    }
-
-    .soundcloud > div:first-of-type {
-        margin: 0;
-        padding: 2px;
-        padding-left: 4px;
-
-        background-image: linear-gradient(to right, white 35%, var(--strong));
     }
 
     .soundcloud .inline {
@@ -162,8 +154,4 @@
     .soundcloud li.tiny:last-of-type {
         border-bottom: 0;
     }
-
-    .soundcloud .tiny {
-    }
-
 </style>
