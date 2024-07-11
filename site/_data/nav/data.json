@@ -6,7 +6,6 @@
     },
     {
         "name": "about",
-        "icon": "&#128071;",
         "path": "about",
         "sub": [
             {
