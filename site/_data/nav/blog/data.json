@@ -1,8 +1,8 @@
 [
     {
-        "name": "parent directory",
-        "icon": "&#128070;",
-        "path": ".."
+        "name": "home",
+        "icon": "&#127968;",
+        "path": "/"
     },
     {
         "name": "blog index",
@@ -10,8 +10,13 @@
         "path": "/blog"
     },
     {
-        "name": "home",
-        "icon": "&#127968;",
-        "path": "/"
+        "name": "all posts",
+        "icon": "&#128209;",
+        "path": "/blog/posts"
+    },
+    {
+        "name": "tags",
+        "icon": "&#127991;",
+        "path": "/blog/tags"
     }
 ]
