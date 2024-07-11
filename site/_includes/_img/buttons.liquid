@@ -1,0 +1,10 @@
+{% assign images = img.buttons %}
+{% for image in images %}
+    {% if image.url %}
+        <a href="{{ image.url }}">
+    {% endif %}
+        <img src="{{ image.path }}" alt="{{ image.alt }}" />
+    {% if image.url %}
+        </a>
+    {% endif %}
+{% endfor %}
