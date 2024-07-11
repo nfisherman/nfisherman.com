@@ -4,6 +4,19 @@
 
 {{ content }}
 
-<div id="rightSidebar" class="box-container sidebar">
-    {% include '_nav-blog.liquid' %}
-</div>
+<nav id="rightSidebar" class="box-container sidebar">
+    <details open>
+        <summary>
+            {% header "h3", "<span class=emoji>▼</span>navigation" %}
+        </summary>
+
+        {% include '_nav/blog/data.liquid' %}
+
+    </details>
+    
+    <style>
+        nav#collapsible {
+            display: none;
+        }
+    </style>
+</nav>
