@@ -6,6 +6,12 @@
     <div class="box-container">
         {% header "h3" title %}
 
+        <a href="https://pcrf1.app.neoncrm.com/forms/general"
+           style="margin-bottom: var(--padding);"
+           alt="Donate to the PCRF! Free Palestine!">
+            <img src="/asset/img/buttons/freegaza.gif" />
+        </a>
+
         {{ content }}
     </div>
     <div class="inline">
@@ -19,6 +25,8 @@
         </div>
     </div>
     <div class="box-container">
-        buttons
+        <div class="buttons">
+            {% include '_img/buttons.liquid' %}
+        </div>
     </div>
 </main>
