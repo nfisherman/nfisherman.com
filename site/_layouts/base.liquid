@@ -8,17 +8,17 @@
         <link rel="stylesheet" href="/style/base.css" />
         <script src="/script/main.js"></script>
     </head>
-    <body>
+    <body onload="main()">
         <div id="container">
             <div id="header" class="box-container">
-                {% include '_header.liquid' %}
+                <h1 aria-hidden>nfisherman<span id="path"> ☆ ~{{ page.url }}</span></h1>
+
+                {% include '_nav/collapsible.liquid' %}
             </div>
             
             <div id="flex">
-                
 
                 {{ content }}
-                
                 
             </div>
             
