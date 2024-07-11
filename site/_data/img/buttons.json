@@ -1,0 +1,28 @@
+[
+    {
+        "path": "/asset/img/buttons/dreamcast.gif",
+        "url": "https://dc.sega.jp/",
+        "alt": ""
+    },
+    {
+        "path": "/asset/img/buttons/evilchrome.gif",
+        "alt": ""
+    },
+    {
+        "path": "/asset/img/buttons/gnu-linux.gif",
+        "alt": ""
+    },
+    {
+        "path": "/asset/img/buttons/internetarchive.png",
+        "url": "https://archive.org/",
+        "alt": ""
+    },
+    {
+        "path": "/asset/img/buttons/piracy.gif",
+        "alt": ""
+    },
+    {
+        "path": "/asset/img/buttons/poweredbymac.gif",
+        "alt": ""
+    }
+]
