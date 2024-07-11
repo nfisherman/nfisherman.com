@@ -63,7 +63,7 @@
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
+    font-family: sans-serif;
     margin: 0;
     background-size: 65px;
     color: black;
@@ -80,6 +80,10 @@ body {
 }
 
 /* below this line is CSS for the layout */
+
+hr {
+    color: var(--strong);
+}
 
 /* the "container" is what wraps your entire website */
 #container {
@@ -122,11 +126,11 @@ body {
     box-shadow: var(--strong) var(--shadow-spacing) var(--shadow-spacing);
 }
 
-#header {
+div#container > div.header {
     display: flex;
     width: 100%;
     height: auto;
-    padding: 0 var(--padding) 0 var(--padding);
+    padding: var(--padding);
     margin-bottom: var(--spacing);
 }
 
@@ -195,6 +199,7 @@ nav.sidebar ul > li {
 
 nav.sidebar > ul > a li,
 nav.sidebar details ul a li,
+nav .latest ul li,
 nav.sidebar ul ul {
     margin-bottom: calc(var(--spacing) / 2);
 }
@@ -278,6 +283,16 @@ main > .box-container:first-of-type {
     margin-left: 0;
 }
 
+.buttons {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons * {
+    text-decoration: none;
+}
+
 /* what's this "order" stuff about??
     allow me to explain!
     if you're using both sidebars, the "order" value
@@ -311,12 +326,15 @@ h1,
 h2,
 h3 {
     font-family: var(--mono);
-    color: var(--strong);
     text-shadow: 2px 2px var(--grey);
 }
 
 h1 {
     font-size: 25px;
+}
+
+h2 {
+    font-size: 21px;
 }
 
 strong {
@@ -327,22 +345,38 @@ strong {
 /* this is just a cool box, it's the darker colored one */
 .box {
     width: 100%;
-    border: 1px solid #000000;
+    border: 1px solid black;
     padding: var(--padding);
+}
+
+.header {
+    font-family: var(--mono);
+    padding: 1px;
+    border: 1px solid black;
+    color: black;
+
+    line-height: 0; 
+    display: block;
+    margin-bottom: var(--spacing);
+}
+
+.header * {
+    color: black;
 }
 
 .header-bar {
     background-image: linear-gradient(to right, white 25%, var(--strong-light));
-    padding: 0;
     padding-left: 5px;
-    line-height: 0; 
-    display: block;
-    margin-bottom: var(--spacing);
     font-size: smaller;
 }
 
-.header-bar * {
-    color: black;
+.mini-header-bar {
+    background-image: linear-gradient(to right, white 35%, var(--strong));
+    font-size: 10px;
+
+    margin: 0;
+    padding: 1px;
+    padding-left: 4px;
 }
 
 /* CSS for extras */
@@ -386,7 +420,7 @@ strong {
         pointer-events: auto;
         user-select: auto;
     }
-    
+
     nav details summary .header-bar {
         margin-bottom: 0;
     }
@@ -436,7 +470,7 @@ strong {
         background-color: inherit;
         font-family: inherit; /* Important for vertical align on mobile phones */
         margin: 0; /* Important for vertical align on mobile phones */
-        padding: 8px;
+        padding: var(--padding);
     }
 
     .dropbtn--input {
@@ -445,7 +479,7 @@ strong {
 
     /* Dropdown content (hidden by default) */
     .dropdown-content {
-        background-color: #FFFFFF;
+        background-color: white;
         box-shadow: var(--strong-dark) var(--shadow-spacing) var(--shadow-spacing);
         display: none;
         position: absolute;
@@ -464,9 +498,23 @@ strong {
         text-align: right;
     }
 
+    .dropdown-content a:hover * {
+        color: white;
+    }
+
+    .dropdown-content ul ul a li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown-content ul ul a li span {
+        margin-bottom: var(--padding)
+    }
+
     /* Show the dropdown menu on click */
     .dropbtn--input:checked + .dropdown-content {
-        display: block;
+        display: flex;
+        flex-direction: column;
     } 
 
     nav#rightSidebar {
