@@ -1,0 +1,4 @@
+{% assign images = img.blinkies %}
+{% for image in images %}
+    <img src="{{ image.path }}" alt="{{ image.alt }}" />
+{% endfor %}
