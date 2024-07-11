@@ -1,29 +1,28 @@
-{% assign sclatest = soundcloud.latest %}
-{% assign schistory = soundcloud.history %}
+{% assign sc = soundcloud.data %}
 <div class="soundcloud">
     <div>current obsession <span class="emoji">&#9834;</span></div>
     <div class="inline">
-        <img src="{{ sclatest.art }}" />
+        <img src="{{ sc[0].art }}" />
         <div>
             <div>
-                <a href="{{ sclatest.song_link }}">
-                    <span>{{ sclatest.song }}</span>
+                <a href="{{ sc[0].song_link }}">
+                    <span>{{ sc[0].song }}</span>
                 </a>
             </div>
             <hr>
             <div>
-                <a href="{{ sclatest.artist_link }}">
-                    <span>{{ sclatest.artist }}</span>
+                <a href="{{ sc[0].artist_link }}">
+                    <span>{{ sc[0].artist }}</span>
                 </a>
             </div>
             <div>
-                <span><em>"{{ sclatest.comment }}"</em></span>
+                <span><em>"{{ sc[0].comment }}"</em></span>
             </div>
         </div>
     </div>
     <div class="tiny">history</div>
     <ul>
-        {% for entry in schistory %}
+        {% for entry in sc offset:1 limit:5 %}
             <li class="tiny">
                 <a href="{{ entry.song_link }}">{{ entry.song }}</a>
                 <span> - </span>
