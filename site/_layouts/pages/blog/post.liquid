@@ -1,9 +1,29 @@
 ---
 layout: pages/blog/index.liquid
+date: git Last Modified
 ---
+
+{% header "h3" title %}
+{% assign currentDate = page.date | date: "%m&#183;%d&#183;%Y %H:%M %p" %}
+{% assign dateString = "Last modified: " | append: currentDate
+                       | append: " (<a href=https://github.com/nfisherman/nfisherman.com/commits/main/site"
+                       | append: page.filePathStem | append: ".md>commit history</a>)" %}
+{% miniheader "h4" dateString %}
+<div class="tags">
+    {% for tag in tags offset: 1 %}
+        <a class="box-container" href="/blog/tags/{{ tag }}">
+            {{ tag }}
+        </a>
+    {% endfor %}
+</div>
+
 
 {{ content }}
 
-<hr>
+<hr style="margin-left:25%;margin-bottom:var(--padding)">
 
-<p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p> 
+<a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1"
+   target="_blank" rel="license noopener noreferrer"
+   style="float:right;">
+    <img src="/asset/img/license/by-nc.svg">
+</a>
