@@ -62,30 +62,6 @@
     font-weight: bolder;
 }
 
-@font-face {
-    font-family: Nunito;
-    src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
-}
-
-@font-face {
-    font-family: Nunito;
-    src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: Nunito;
-    src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
-    font-style: italic;
-}
-
-@font-face {
-    font-family: Nunito;
-    src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
-    font-style: italic;
-    font-weight: bold;
-}
-
 body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
@@ -154,7 +130,22 @@ body {
     margin-bottom: var(--spacing);
 }
 
-nav ul {
+nav details > summary {
+    display: block;
+    pointer-events: none; /* prevents click events */
+    user-select: none; /* prevents text selection */
+}
+
+nav details summary * {
+    padding-right: 5px;
+}
+
+nav details summary .emoji {
+    display: none;
+    float: right;
+}
+
+nav ul, nav.sidebar ul {
     list-style-type: none;
     padding: 0;
     font-family: var(--mono);
@@ -167,7 +158,7 @@ nav#collapsible {
     display: none;
 }
 
-.sidebar {
+nav.sidebar {
     display: flex;
     flex-direction: column;
     width: var(--sidebar-width);
@@ -175,16 +166,16 @@ nav#collapsible {
     margin-right: var(--spacing);
 }
 
-nav#leftSidebar {
+nav.sidebar {
     order: 1;
 }
 
-nav#leftSidebar ul a {
+nav ul a {
     text-decoration: none;
 }
 
-nav#leftSidebar ul li,
-nav#leftSidebar ul * li {
+nav.sidebar ul li,
+nav.sidebar ul * li {
     font-family: var(--mono);
 
     width: 100%;
@@ -198,38 +189,40 @@ nav#leftSidebar ul * li {
     text-align: left;
 }
 
-nav#leftSidebar ul > li {
-    padding-right: 10px;
-}
-
-nav#leftSidebar > ul > a li,
-nav#leftSidebar ul ul {
-    margin-bottom: calc(var(--spacing) / 2);
-}
-
-nav#leftSidebar ul ul {
-    margin-left: var(--padding);
-}
-
-nav#leftSidebar ul ul a li {
-    border-top: 0;
-    padding-right: 9px;
-}
-
-nav#leftSidebar ul ul a li .nav-path {
-    display: none;
-}
-
-nav#leftSidebar ul ul a:last-of-type li {
+nav.sidebar ul > li {
     padding-right: 6px;
 }
 
-nav#leftSidebar ul li .emoji,
-nav#leftSidebar ul * li .emoji {
+nav.sidebar > ul > a li,
+nav.sidebar details ul a li,
+nav.sidebar ul ul {
+    margin-bottom: calc(var(--spacing) / 2);
+}
+
+nav.sidebar ul ul {
+    margin-left: var(--padding);
+}
+
+nav.sidebar ul ul a li {
+    border-top: 0;
+
+    padding-right: 9px;
+}
+
+nav.sidebar ul ul a li .nav-path {
+    display: none;
+}
+
+nav.sidebar ul ul a:last-of-type li {
+    padding-right: 6px;
+}
+
+nav.sidebar ul li .emoji,
+nav.sidebar ul * li .emoji {
     float: right;
 }
 
-nav#leftSidebar ul a:hover li {
+nav.sidebar ul a:hover li {
     background: black;
     color: white;
 }
@@ -242,6 +235,12 @@ nav#leftSidebar ul a:hover li {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+#rightSidebar {
+    order: 3;
+    margin-left: var(--spacing);
+    margin-right: 0;
 }
 
 #flex {
@@ -284,12 +283,6 @@ main > .box-container:first-of-type {
     if you're using both sidebars, the "order" value
     tells the CSS the order in which to display them.
     left sidebar is 1, content is 2, and right sidebar is 3! */
-
-#rightSidebar {
-    order: 3;
-    margin-left: var(--spacing);
-    margin-right: 0;
-}
 
 footer {
     color: black;
@@ -383,11 +376,25 @@ strong {
     
     #flex {
         flex-wrap: wrap;
+        flex-direction: column;
     }
 
     /* the order of the items is adjusted here for responsiveness!
         since the sidebars would be too small on a mobile device.
         feel free to play around with the order! */
+    nav details summary {
+        pointer-events: auto;
+        user-select: auto;
+    }
+    
+    nav details summary .header-bar {
+        margin-bottom: 0;
+    }
+
+    nav details summary .emoji {
+        display: block;
+    }
+
     nav#leftSidebar {
         display: none;
     }
@@ -410,8 +417,12 @@ strong {
         display: none;
     }
 
-    nav#leftSidebar ul ul a li .nav-path {
+    nav#collapsible ul ul a li .nav-path {
         display: block;
+    }
+
+    nav#collapsible ul ul {
+        font-size: inherit;
     }
 
     /* Dropdown button */
@@ -457,6 +468,33 @@ strong {
     .dropbtn--input:checked + .dropdown-content {
         display: block;
     } 
+
+    nav#rightSidebar {
+        width: 100%;
+        order: 1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: var(--spacing);
+    }
+
+    nav.sidebar details ul a li {
+        margin-top: 0;
+        margin-bottom: 0;
+        border-top: 0;
+    }
+
+    summary {
+        display: flex;
+        cursor: pointer;
+    }
+      
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    details {
+        user-select: none;
+    }
 
     .inline {
         flex-direction: column;

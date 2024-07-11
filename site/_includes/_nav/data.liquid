@@ -1,5 +1,5 @@
 <ul>
-    {% assign nav = nav %}
+    {% assign nav = nav.data %}
     {% for entry in nav %}
         {% unless entry.sub %}
             <a href="/{{ entry.path }}">

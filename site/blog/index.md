@@ -1,5 +1,5 @@
 ---
-layout: pages/blog.liquid
+layout: pages/blog/index.liquid
 title: blog
 ---
 
