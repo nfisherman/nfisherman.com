@@ -18,9 +18,18 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addShortcode(
 		"header",
 		(tag, text) =>
-		  `<div class="box header-bar"><${tag}>${text}</${tag}></div>`
+		  `<div class="header-bar header"><${tag}>${text}</${tag}></div>`
 	);
-	
+	eleventyConfig.addShortcode(
+		"miniheader",
+		(tag, text) =>
+		  `<div class="mini-header-bar header"><${tag}>${text}</${tag}></div>`
+	);
+
+	// Filter
+	eleventyConfig.addCollection("posts", function (collection) {
+		return collection.getFilteredByTag("posts");
+	});
 
 	return {
 		dir: {
