@@ -1,0 +1,27 @@
+---
+pagination:
+    data: collections
+    size: 1
+    alias: tag
+    filter:
+        - all
+        - posts
+layout: pages/blog/index.liquid
+permalink: "/blog/tags/{{ tag }}/index.html"
+---
+
+{% assign title = "Tagged &quot;" | append: tag | append: "&quot;" %}
+{% header "h3" title %}
+
+<ul>
+    {% assign taglist = collections[ tag ] %}
+    {% for post in taglist %}
+        <li><a href="{{ post.url }}">{{ post.data.title }} - {{ post.date | date: "%m&#183;%d&#183;%Y %H:%M %p" }}</a></li>
+    {% endfor %}
+</ul>
+
+<style>
+    .box {
+        margin-bottom: var(--spacing);
+    }
+</style>
