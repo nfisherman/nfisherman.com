@@ -1,0 +1,15 @@
+<div class="box">
+    <a href="{{ post.url }}">{% header "h3" post.data.title %}</a>
+    {% assign currentDate = post.date | date: "%m&#183;%d&#183;%Y %H:%M %p" %}
+    {% assign dateString = "Last modified: " | append: currentDate
+                            | append: " (<a href=https://github.com/nfisherman/nfisherman.com/commits/main/site"
+                            | append: post.filePathStem | append: ".md>commit history</a>)" %}
+    {% miniheader "h4" dateString %}
+
+    {% assign integratedLinked = "<a href=https://github.com/nfisherman/nfisherman.com/commits/main/site"
+                                 | append: post.filePathStem | append: ".md>" | append: currentDate | append: "</a>" %}
+    {% miniheader "h4" integratedLinked %}
+    {% assign posted = post.content | split: '\n' %}
+    <p>{{ posted[0] }} ... <a href="{{ post.url }}">read more</a></p>
+</div>
+
