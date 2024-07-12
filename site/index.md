@@ -3,7 +3,7 @@ layout: pages/index.liquid
 title: home
 ---
 
-<pre style="float: right;margin-left:15px;margin-bottom:10px;">
+<pre style="float:right;margin-left:15px;margin-bottom:10px;">
 |\   \\\\__     o
 | \_/    o \    o 
 > _   (( <_  oo  
@@ -17,4 +17,4 @@ I'm a IST student in the pursuit of my MLIS. I do political organizing in MKE, t
 
 This website exists as a creative outlet away from the oppresive conformity of the modern web. Most of the website is hand-coded, though I make use of Eleventy to make recycling elements and writing blog posts easier. You can read more uninteresting information about the technology used to make and run this site [here](/about/site).
 
-~~If you need to contact me you can reach me at webmaster@nfisherman.com, although do keep in mind that this email is heavily filtered.~~ (WIP)
+~~If you need to contact me you can reach me at webmaster[at]nfisherman[dot]com, although do keep in mind that this email is heavily filtered.~~ (WIP)
