@@ -11,11 +11,11 @@ Files: site/blog/posts/*
 Copyright: Cedar Lehman <ca.lehman05@gmail.com>
 License: CC-BY-NC 4.0
 
-Files: asset/font/MesloLGMDZ/*
+Files: site/asset/font/MesloLGMDZ/*
 Copyright: André Berg <andre@irisvfx.com>
 License: Apache 2.0
 
-Files asset/img/icons/*
+Files site/asset/img/icons/*
 Copyright: Rojal
 Source: https://www.pngall.com/fish-hook-png/download/64621
 License: CC-BY-NC 4.0
