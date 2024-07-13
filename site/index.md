@@ -3,7 +3,7 @@ layout: pages/index.liquid
 title: home
 ---
 
-<pre style="float:right;margin-left:15px;margin-bottom:10px;">
+<pre style="float:right;">
 |\   \\\\__     o
 | \_/    o \    o 
 > _   (( <_  oo  
