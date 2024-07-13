@@ -13,6 +13,9 @@ module.exports = (eleventyConfig) => {
 	eleventyConfig.addPassthroughCopy({
 		"tools/pull-latest.sh": "pull-latest.sh"
 	});
+	eleventyConfig.addPassthroughCopy({
+		"copyright": "copyright.txt"
+	});
 
 	// Shortcodes
 	eleventyConfig.addShortcode(
