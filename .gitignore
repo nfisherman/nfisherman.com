@@ -401,3 +401,4 @@ dist/
 release/
 test/
 .idea/
+.hugo_build.lock
