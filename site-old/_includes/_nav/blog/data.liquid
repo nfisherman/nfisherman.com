@@ -1,9 +1,0 @@
-<ul>
-    {% assign nav = nav.blog.data %}
-    {% for entry in nav %}
-        <a href="{{ entry.path }}"><li>
-            <span class="emoji">{{ entry.icon }}</span>
-            {{ entry.name }}
-        </li></a>
-    {% endfor %}
-</ul>
