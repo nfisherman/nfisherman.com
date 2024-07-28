@@ -397,8 +397,6 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-dist/
-release/
-test/
-.idea/
+public/
+resources/
 .hugo_build.lock
