@@ -5,58 +5,75 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>home - nfisherman</title>
         <link rel="stylesheet" href="/style.css">
+        <script src="common.js"></script>
     </head>
-    <body>
+    <body onload="main()">
         <header>
             <div class="flex">
                 <nav>
-                    <a href="/" style="font-weight:bolder;"><pre>
-        __ _     _
+                    <pre id="title" style="font-weight:bolder;"><span>        __ _     _
        / _(_)   | |
  _ __ | |_ _ ___| |__   ___ _ __ _ __ ___   __ _ _ __
 | '_ \|  _| / __| '_ \ / _ \ '__| '_ ` _ \ / _` | '_ \
 | | | | | | \__ \ | | |  __/ |  | | | | | | (_| | | | |
-|_| |_|_| |_|___/_| |_|\___|_|  |_| |_| |_|\__,_|_| |_|</pre>
-                    </a>
+|_| |_|_| |_|___/_| |_|\___|_|  |_| |_| |_|\__,_|_| |_|</span></pre>
                     <ul class="flex">
+                        <li><a href="/"><pre>
+,-----.
+| <span>home</span>
+'-----*</pre>
+                        </a></li>
                         <li class="dropdown">
                             <a href="/about" class="dropdown-label"><pre>
-╭-------╮
-| about |</pre>
+,--------.
+| <span>about </span></span> 
+'--------*</pre>
                             </a>
                             <div class="dropdown-content">
                                 <a href="/about/me"><pre>
-╭------╮
-|  me  |</pre>
+,------,
+|  <span>me</span>  |
+</pre>
                                 </a>
                                 <a href="/about/site"><pre>
-╭------╮
-| site |
-╰------╯</pre>
+|*----*|
+| <span>site</span> |
+'------'</pre>
                                 </a>
                             </div>
                         </li>
-                        <li><a href="/blog">blog</a></li>
+                        <li><a href="/blog"><pre>
+,-----.
+| <span>blog</span> 
+'-----*</pre>
+                        </a></li>
+                        <li><a href="/projects"><pre>
+,---------.
+| <span>projects</span> 
+'---------*</pre>
+                        </a></li>
+                        <li><a href="/library"><pre>
+,--------.
+| <span>library</span> 
+'--------*</pre>
+                        </a></li>
+                        <li><a href="/"><pre>
+,--------.
+| <span>shrines</span> 
+'--------*</pre>
+                        </a></li>
+                        <li><a href="/links"><pre>
+,------.,
+| <span>links</span> |
+'------*'</pre>
+                        </a></li>
                     </ul>
                 </nav>
                 <div class="flex right" tabindex="0">
-                    <pre id="lights-string">
-
-:
-:
-:
-:
-:
-:
-*</pre>
-                    <pre id="lights">
- |_______| 
-  \ |_| /
-    /|\
--  ( @ )  -
-    '-'
-  /     \
-     *</pre>
+                    <pre id="lights-string"></pre>
+                    <pre id="lights"></pre>
+                    <pre id="lights"></pre>
+                    <pre id="lights" class="solar">&#9788;</pre>
                 </div>
             </div>
         </header>
@@ -64,7 +81,11 @@
 
         </main>
         <footer>
-
+            <div classs="flex">
+                <a href="/copyright">(C) Cedar Lehman 2024</a>
+                <em>v2</em>
+                <a href="https://github.com/nfisherman/nfisherman.com">source</a>
+            </div>
         </footer>
     </body>
 </html>
