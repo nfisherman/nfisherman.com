@@ -5,7 +5,7 @@ Source: https://github.com/nfisherman/nfisherman.com
 
 Files: *
 Copyright: Cedar Lehman <ca.lehman05@gmail.com>
-License: WTFPLv2
+License: MIT
 
 Files: site-old/blog/posts/*
 Copyright: Cedar Lehman <ca.lehman05@gmail.com>
@@ -22,7 +22,6 @@ License: CC-BY-NC 4.0
  https://creativecommons.org/licenses/by-nc/4.0/ or send a letter to Creative
  Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
-License: WTFPLv2
- This work is free. You can redistribute it and/or modify it under the
- terms of the Do What The Fuck You Want To Public License, Version 2,
- as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
+License: MIT
+ This work is licensed under the terms of the MIT license.  
+ For a copy, see <https://opensource.org/licenses/MIT>.
