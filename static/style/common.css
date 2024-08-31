@@ -1,0 +1,123 @@
+:root {
+    --background-color: white;
+    --color: black;
+
+    --min-font-size: 16px;
+    --header-size-diff: 7px;
+}
+
+@media (prefers-dark-interface){
+    :root {
+        --background-color: black;
+        --color: white;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+
+    background-color: var(--background-color);
+    color: var(--color);
+    padding: 0;
+}
+
+body {
+    max-width: 800px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    font-size: calc(var(--min-font-size) + var(--header-size-diff) * 6);
+}
+
+h2 {
+    font-size: calc(var(--min-font-size) + var(--header-size-diff) * 5);
+}
+
+h3 {
+    font-size: calc(var(--min-font-size) + var(--header-size-diff) * 4);
+}
+
+h4 {
+    font-size: calc(var(--min-font-size) + var(--header-size-diff) * 3);
+}
+
+h5 {
+    font-size: calc(var(--min-font-size) + var(--header-size-diff) * 2);
+}
+
+h6 {
+    font-size: calc(var(--min-font-size) + var(--header-size-diff));
+}
+
+p {
+    font-size: var(--min-font-size);
+}
+
+.comic-sans {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right {
+    margin: 0;
+    margin-left: auto;
+}
+
+nav {
+    padding: 18px;
+    margin-bottom: 30px;
+}
+
+nav > * {
+    font-size: calc(var(--min-font-size) + var(--header-size-diff) * 2);
+
+    color: var(--color);
+    text-decoration: none;
+    margin: auto 20px auto 0;
+}
+
+nav > *:hover {
+    background-color: var(--color);
+    color: var(--background-color);
+}
+
+#title {
+    position: relative;
+    float: left;
+}
+
+#title img {
+    margin: 5px;
+    margin-bottom: 0;
+    width: auto;
+    height: 50px;
+}
+
+#title .hoverImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+#title:hover .hoverImg {
+    display: block;
+}
+
+#title:hover .hoverImg {
+    display: block;
+}
