@@ -7,13 +7,13 @@ Files: *
 Copyright: Cedar Lehman <ca.lehman05@gmail.com>
 License: MIT
 
-Files: site-old/blog/posts/*
+Files: content/posts/*
 Copyright: Cedar Lehman <ca.lehman05@gmail.com>
 License: CC-BY-NC 4.0
 
-Files site-old/asset/img/icons/*
+Files static/img/icon/*
 Copyright: Rojal
-Source: https://www.pngall.com/fish-hook-png/download/64621
+Source: https://www.pngall.com/fish-hook-png/download/64665
 License: CC-BY-NC 4.0
 
 License: CC-BY-NC 4.0
