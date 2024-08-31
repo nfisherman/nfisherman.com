@@ -1,0 +1,6 @@
+baseURL = 'https://nfisherman.neocities.org/'
+languageCode = 'en-us'
+title = 'nfisherman'
+[params]
+    [params.contact]
+        email = 'ca.lehman05@gmail.com'
