@@ -397,7 +397,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-public/
-resources/
 .DS_Store
-.hugo_build.lock
