@@ -26,16 +26,25 @@ For a copy, see <https://opensource.org/licenses/MIT>.
                 <a href="{{ get_url(path='@/blog/_index.md') }}">blog</a>
             </nav>
         </header>
-
+        <hr>
         <main>
             {% block content %} {% endblock %}
         </main>
-
+        <hr>
         <footer>
             <div class="flex">
-                <a href="/copyright">(C) Cedar Lehman 2024</a>
-                <em>v2</em>
-                <a href="https://github.com/nfisherman/nfisherman.com">source</a>
+                (C) <a href="/about">Cedar Lehman</a> 2024 • <em>v2</em> • <a href="/about#license">CC-BY-NC 4.0</a> <a href="https://creativecommons.org/licenses/by-nc/4.0/><img src="/img/icon/footer/cc.png" alt="Creative Commons Logo"></a>
+                <div class="flex right">
+                    <a href="https://github.com/nfisherman/nfisherman.com">
+                        <img src="/img/icon/footer/github.png" alt="Source Code">
+                    </a>
+                    <a href="/ethics">
+                        <img src="/img/icon/footer/ethics.png" alt="Ethics">
+                    </a>
+                    <a href="https://www.getzola.org/">
+                        <img src="/img/icon/footer/zola.png" alt="Created with Zola">
+                    </a>
+                </div>
             </div>
         </footer>
     </body>
