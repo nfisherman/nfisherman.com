@@ -118,6 +118,12 @@ nav > *:hover {
     display: block;
 }
 
+.credit {
+    float: right;
+    font-size: 8px;
+    color: grey;
+}
+
 .social-icon {
     width: auto;
     height: 33px;
