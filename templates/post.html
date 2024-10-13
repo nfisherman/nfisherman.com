@@ -1,9 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
+  <h1 class="title">
     {{ page.title }}
-</h1>
-<p class="subtitle"><strong>{{ page.date }}</strong></p>
-{{ page.content | safe }}
+  </h1>
+
+  {% if page.subtitle %}
+    <p class="subtitle">
+      <strong>{{ page.subtitle }}</strong>
+    </p>
+  {% endif %}
+
+  <p>
+    {% if date %}
+      <em>Posted:
+      </em>
+      {{ page.date }}{% if page.updated %}
+        |
+
+        <em>Updated:
+        </em>
+        <a href="https://github.com/nfisherman/nfisherman.com/commits/">{{ page.updated }}</a>
+      {% endif %}
+    {% endif %}
+  </p>
+  <br>
+
+  {{ page.content | safe }}
 {% endblock content %}
