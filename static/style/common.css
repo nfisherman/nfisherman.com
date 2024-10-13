@@ -70,14 +70,14 @@ h6 {
 
 p {
     font-size: var(--min-font-size);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 a {
     color: var(--color);
 }
 
-a:hover {
+a:hover, a:focus {
     color: var(--background-color);
     background-color: var(--color);
 }
@@ -137,14 +137,8 @@ footer p {
 }
 
 footer a {
-    color: var(--color);
     margin: 0;
     padding: 1px;
-}
-
-footer a:hover {
-    color: var(--background-color);
-    background-color: var(--color);
 }
 
 svg.social-icon {
@@ -153,5 +147,4 @@ svg.social-icon {
     padding: 5px;
     padding-bottom: 2px;
     text-decoration: none;
-
 }
