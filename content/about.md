@@ -1,5 +1,5 @@
 +++
-title = "About"
+title = "about"
 template = "std.html"
 +++
 
@@ -13,8 +13,8 @@ If you're an employer, you're probably looking for [my resume](https://docs.goog
 
 ## Site
 
-This website exists as a creative outlet, distant from the oppresive uniformity of the modern web. Most of the website is hand-coded, though I make use of Eleventy to make recycling elements and writing blog posts easier.
+This website exists as a creative outlet, distant from the oppresive uniformity of the modern web. Most of the website is hand-coded, though I make use of [Zola](https://www.getzola.org/) to make recycling elements and writing blog posts easier.
 
-### License
+#### License
 
 All code (html, css, js, etc.) on this website is licensed under the [MIT license](https://github.com/nfisherman/nfisherman.com/blob/main/LICENSE). All blog posts are licensed under the [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en). Some assets, such as fonts or images, may be [licensed differently](https://github.com/nfisherman/nfisherman.com/blob/main/copyright). 
