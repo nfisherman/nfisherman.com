@@ -3,12 +3,12 @@
 This work is licensed under the terms of the MIT license.  
 For a copy, see <https://opensource.org/licenses/MIT>.
 -->
-<html alng="en">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> - nfisherman</title>
-        <link rel="icon" type="image/x-icon" href="/img/icon/favicon/light.ico">
+        <link rel="icon" type="image/x-icon" href="/img/icons/site/favicon/light.ico">
         <link rel="stylesheet" href="/style/common.css">
     </head>
     <body>
@@ -16,26 +16,35 @@ For a copy, see <https://opensource.org/licenses/MIT>.
             <nav class="flex">
                 <a href="/" id="title">
                     <div class="imageInn">
-                        <img src="/img/icon/fullres/light.png"  alt="home">
+                        <img src="/img/icons/site/fullres/light.png"  alt="home">
                     </div>
                     <div class="hoverImg">
-                        <img src="/img/icon/fullres/dark.png" alt="home">
+                        <img src="/img/icons/site/fullres/dark.png" alt="home">
                     </div>
                 </a>
                 <a href="/about">about</a>
                 <a href="{{ get_url(path='@/blog/_index.md') }}">blog</a>
             </nav>
         </header>
-
+        <hr>
         <main>
             {% block content %} {% endblock %}
         </main>
-
+        <hr>
         <footer>
             <div class="flex">
-                <a href="/copyright">(C) Cedar Lehman 2024</a>
-                <em>v2</em>
-                <a href="https://github.com/nfisherman/nfisherman.com">source</a>
+                (C) <a href="/about">Cedar Lehman</a> 2024 • <em>v2</em> • <a href="/about#license">CC-BY-NC 4.0</a> <a href="https://creativecommons.org/licenses/by-nc/4.0/><img src="/img/icon/footer/cc.png" alt="Creative Commons Logo"></a>
+                <div class="flex right">
+                    <a href="/ethics">
+                        <img class="social-icon" src="/img/icons/footer/ethics.png" alt="Ethics">
+                    </a>
+                    <a href="https://www.getzola.org/">
+                        <img class="social-icon" src="/img/icons/footer/zola.png" alt="Created with Zola">
+                    </a>
+                    <a href="https://github.com/nfisherman/nfisherman.com">
+                        <img class="social-icon" src="/img/icons/footer/source.png" alt="Source Code">
+                    </a>
+                </div>
             </div>
         </footer>
     </body>

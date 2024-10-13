@@ -63,10 +63,6 @@ p {
     font-size: var(--min-font-size);
 }
 
-.comic-sans {
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-}
-
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -120,4 +116,15 @@ nav > *:hover {
 
 #title:hover .hoverImg {
     display: block;
+}
+
+.credit {
+    float: right;
+    font-size: 8px;
+    color: grey;
+}
+
+.social-icon {
+    width: auto;
+    height: 33px;
 }
