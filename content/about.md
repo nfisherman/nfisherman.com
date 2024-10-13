@@ -17,4 +17,4 @@ This website exists as a creative outlet, distant from the oppresive uniformity 
 
 ### License
 
-All code (html, css, js, etc.) on this website is licensed under the [WTFPL v2](http://www.wtfpl.net/about/). All blog posts are licensed under the [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en). Some assets, such as fonts or images, may be [licensed differently](https://github.com/nfisherman/nfisherman.com/blob/main/copyright). 
+All code (html, css, js, etc.) on this website is licensed under the [MIT license](https://github.com/nfisherman/nfisherman.com/blob/main/LICENSE). All blog posts are licensed under the [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en). Some assets, such as fonts or images, may be [licensed differently](https://github.com/nfisherman/nfisherman.com/blob/main/copyright). 
