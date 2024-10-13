@@ -73,6 +73,15 @@ p {
     margin-bottom: 5px;
 }
 
+a {
+    color: var(--color);
+}
+
+a:hover {
+    color: var(--background-color);
+    background-color: var(--color);
+}
+
 .flex {
     display: flex;
     flex-wrap: wrap;
