@@ -7,9 +7,24 @@ template = "std.html"
     img {
         float: left;
         margin-right: 20px;
+        margin-bottom: 20px;
         max-width: 225px;
         outline: 6px ridge black;
         background-color: rgba(0, 0, 0, 0.2)
+    }
+
+    @media screen and (max-width: 450px){
+        img {
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            float: none;
+        }
+
+        br:first-of-type {
+            display: none;
+        }
     }
 </style>
 
@@ -56,7 +71,7 @@ You are free to:
 
 Under the following terms:
 
- - *Attribution* — You must give appropriate credit , provide a link to the license, and indicate if changes were made.
+ - *Attribution* — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
  - *NonCommercial* — You may not use the material for commercial purposes.
 
 <br>
