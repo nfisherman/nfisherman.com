@@ -1,17 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
-<img src="/img/gonefishin.jpg">
 
-<a href="https://decolonizepalestine.com/"><img id="badge" src="/img/freegaza.gif" alt="Decolonize Palestine, a collection of resources for organizers and anyone who wants to learn more about Palestine."></a>
-<style>
+
+  <img src="/img/gonefishin.jpg" alt="Two people sitting on a pier and fishing">
+
+  <a href="https://decolonizepalestine.com/"><img
+      id="badge"
+      src="/img/freegaza.gif"
+      alt="Decolonize Palestine, a collection of resources for organizers and anyone who wants to learn more about Palestine."></a>
+  <style>
     #badge {
-        width: 88px;
-        height: 31px;
-        float: right;
+      width: 88px;
+      height: 31px;
+      float: right;
     }
-</style>
+  </style>
 
-<p>Welcome to <strong>nfisherman</strong>, the website of <strong>Cedar Lehman</strong>. The current iteration of the website went online on October 13, 2024. Take a look around!</p>
+  <p>Welcome to
+    <strong>nfisherman</strong>, the website of
+    <strong>Cedar Lehman</strong>. The current iteration of the website went online on October 13, 2024. Take a look around!</p>
 
+  <style>
+    @media screen and (max-width: 500px) {
+      #badge {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+      }
+    }
+  </style>
 {% endblock content %}
