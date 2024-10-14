@@ -86,12 +86,12 @@ a:hover, a:focus {
     background-color: var(--color);
 }
 
-main a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="nfisherman.com"]):after {
+main a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="nfisherman.neocities.org"]):after {
     margin-left: 3px;
     content: url('/img/icons/outlink/outlink.svg');
 }
 
-main a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="nfisherman.com"]):hover:after {
+main a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="nfisherman.neocities.org"]):hover:after {
     content: url('/img/icons/outlink/outlink-hover.svg');
 }
 
