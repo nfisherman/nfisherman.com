@@ -86,14 +86,7 @@ a:hover, a:focus {
     background-color: var(--color);
 }
 
-main a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="nfisherman.neocities.org"]):after {
-    margin-left: 3px;
-    content: url('/img/icons/outlink/outlink.svg');
-}
 
-main a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="nfisherman.neocities.org"]):hover:after {
-    content: url('/img/icons/outlink/outlink-hover.svg');
-}
 
 li {
     margin-left: 20px;
@@ -164,4 +157,10 @@ svg.social-icon {
     padding: 5px;
     padding-bottom: 2px;
     text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        text-align: center;
+    }
 }
