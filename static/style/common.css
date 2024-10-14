@@ -44,6 +44,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 
+main > *:first-of-type {
+    margin-top: 0;
+}
+
 h1 {
     font-size: calc(var(--min-font-size) + var(--header-size-diff) * 6);
 }
@@ -80,6 +84,19 @@ a {
 a:hover, a:focus {
     color: var(--background-color);
     background-color: var(--color);
+}
+
+main a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="nfisherman.com"]):after {
+    margin-left: 3px;
+    content: url('/img/icons/outlink/outlink.svg');
+}
+
+main a:is([href^="http:"],[href^="https:"],[href^="//"]):not([href*="nfisherman.com"]):hover:after {
+    content: url('/img/icons/outlink/outlink-hover.svg');
+}
+
+li {
+    margin-left: 20px;
 }
 
 .flex {
