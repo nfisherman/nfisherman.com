@@ -4,33 +4,45 @@ template = "std.html"
 +++
 
 <style>
-    img {
-        float: left;
-        margin-right: 20px;
+    .weird-about-formatting {
+        display: flex;
         margin-bottom: 20px;
+    }
+
+    img {
+        margin-right: 20px;
         max-width: 225px;
         outline: 6px ridge black;
         background-color: rgba(0, 0, 0, 0.2)
     }
 
-    @media screen and (max-width: 450px){
-        img {
+    @media screen and (max-width: 550px){
+        .weird-about-formatting {
+            flex-direction: column;
+        }
+        
+        .weird-about-formatting div {
             width: 100%;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            float: none;
         }
 
-        br:first-of-type {
-            display: none;
+        img {
+            display: block;
+            margin: 0 auto 20px;
         }
     }
 </style>
 
 ## Me
 
+<div class="weird-about-formatting">
+
+<div>
+
 ![A picture of me](/img/me.png)
+
+</div>
+
+<div>
 
 <h5 style="margin-top: 0;">Who am I?</h5>
 
@@ -44,7 +56,9 @@ I'm an Information Science and Technology student at the University of Wisconsin
 
 If you're an employer, you're probably looking for [my resume](https://docs.google.com/document/d/1SKiEOYEqm010VA3BUhUI_E7HRYK5pvSp7Je_dPUpIsk/edit?usp=sharing).
 
-<br style="line-height:50px">
+</div>
+
+</div>
 
 ##### Activism
 

@@ -7,7 +7,7 @@ Files: *
 Copyright: Cedar Lehman <ca.lehman05@gmail.com>
 License: MIT
 
-Files: content/blog/*
+Files: content/blog/* content/notes/*
 Copyright: Cedar Lehman <ca.lehman05@gmail.com>
 License: CC-BY-NC 4.0
 
@@ -17,7 +17,7 @@ Source: https://www.pngall.com/fish-hook-png/download/64621
 License: CC-BY-NC 4.0
 
 Files: static/img/gonefishin.jpg
-Copyright: Tomasz Filipek
+Copyright: Tomasz Filipek <hello@tombrand.pl>
 Source: https://www.pexels.com/photo/two-men-fishing-on-lake-1630039/
 License: Pexels License
 

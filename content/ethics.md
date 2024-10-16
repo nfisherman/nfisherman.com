@@ -1,5 +1,5 @@
 +++
-title = "Ethics"
+title = "ethics"
 date = 2024-10-13
 template = "std.html"
 +++
